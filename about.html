@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About and method | Unblinded Neuro</title>
+<meta name="description" content="Background in scientific due diligence and neurodegeneration research, and the sourcing method behind every claim: the source hierarchy, confidence tiers, and the separation of human from preclinical evidence.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About and method | Unblinded Neuro">
+<meta property="og:description" content="The sourcing method is the product. Source hierarchy, confidence tiers, and what gets published when a claim will not close.">
+<meta property="og:url" content="https://unblindedneuro.com/about.html">
+<meta property="og:site_name" content="Unblinded Neuro">
+<meta property="og:image" content="https://unblindedneuro.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Unblinded Neuro">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="stylesheet" href="styles.css">
+<script>
+document.documentElement.className += " js";
+document.addEventListener("DOMContentLoaded", function () {
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    for (var i = 0; i < els.length; i++) { els[i].className += " shown"; }
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    for (var i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) {
+        entries[i].target.classList.add("shown");
+        io.unobserve(entries[i].target);
+      }
+    }
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.04 });
+  for (var j = 0; j < els.length; j++) { io.observe(els[j]); }
+});
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="site-nav" aria-label="Primary">
+  <div class="wide">
+    <a class="brand" href="index.html" aria-label="Unblinded Neuro">Unblinded <svg class="glyph" viewBox="0 0 66 72" aria-hidden="true"><rect x="0" y="0" width="14" height="69"></rect><rect x="19" y="12" width="13" height="57"></rect><rect x="35" y="34" width="13" height="35"></rect><rect x="52" y="0" width="14" height="69"></rect><line x1="0" y1="70.5" x2="66" y2="70.5" stroke-width="3" opacity=".55"></line></svg>euro</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="insights.html">Insights</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="prose">
+      <p class="eyebrow">About</p>
+      <h1>The sourcing method is the product.</h1>
+      <p class="lede">Anyone can assemble a list of competitors. What is scarce is a list where every row states how strongly it is supported, and the unsupported rows are left visible.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="prose">
+      <h2>Background</h2>
+      <p>Unblinded Neuro is one person.</p>
+      <p>Since July 2026, scientific due diligence and market analysis at a life science fund of funds, supporting the firm's private markets relationships across the UK, Europe and the US.</p>
+      <p>Senior Scientist at Neuro-Bio Ltd, a neurodegeneration company, from September 2024 to July 2026. Research and client-facing work. The perspective on this page comes from inside a research company rather than from a database.</p>
+    </div>
+  </section>
+
+  <section class="reveal" id="method">
+    <div class="prose">
+      <h2>Method</h2>
+
+      <h3>The source hierarchy</h3>
+      <p>A claim is supported by a regulator record, a company primary document, a registry entry, a granted or published patent, a peer-reviewed paper, or a conference presentation. Nothing else counts, and each is cited by an identifier you can retrieve yourself. Where two disagree the regulator record wins: no sponsor slide outranks the mechanism section of an approved label.</p>
+      <p class="src">AVLAYAH US Prescribing Information, revised 3/2026, Reference ID 5769209, section 12.1.</p>
+
+      <h3>Confidence tiers, written on every row</h3>
+      <table>
+        <thead>
+          <tr><th scope="col">Tier</th><th scope="col">What it means</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>HIGH</td><td>Company primary document, granted or published patent, regulator label, or peer-reviewed paper</td></tr>
+          <tr><td>MEDIUM</td><td>An inference from a clinical or pharmacological signal, written as an inference</td></tr>
+          <tr><td>LOW</td><td>Secondary coverage only. Marked and kept, never dropped</td></tr>
+        </tbody>
+      </table>
+      <p>The tier is a column in the data file, so it survives the trip from research to slide. Across 69 in-scope rows of the blood-brain barrier map:</p>
+
+      <div class="figure">
+        <svg class="fig-wide" viewBox="0 0 1100 106" role="img" aria-label="Stacked bar of mechanism confidence across 69 in-scope rows: HIGH 42, MEDIUM 17, LOW 10.">
+          <title>Mechanism confidence across 69 in-scope rows</title>
+          <rect class="fig-high" x="0"     y="16" width="645.2" height="44"></rect>
+          <rect class="fig-med"  x="645.2" y="16" width="261.2" height="44"></rect>
+          <rect class="fig-low"  x="906.4" y="16" width="153.6" height="44"></rect>
+          <text x="0"     y="84">HIGH <tspan class="fig-val">42</tspan></text>
+          <text x="645.2" y="84">MEDIUM <tspan class="fig-val">17</tspan></text>
+          <text x="906.4" y="84">LOW <tspan class="fig-val">10</tspan></text>
+        </svg>
+        <svg class="fig-narrow" viewBox="0 0 340 140" role="img" aria-label="Mechanism confidence across 69 in-scope rows: HIGH 42, MEDIUM 17, LOW 10.">
+          <title>Mechanism confidence across 69 in-scope rows</title>
+          <text x="0" y="14">HIGH</text>
+          <rect class="fig-high" x="0" y="20" width="250" height="16"></rect>
+          <text class="fig-val" x="258" y="33">42</text>
+          <text x="0" y="62">MEDIUM</text>
+          <rect class="fig-med" x="0" y="68" width="101.2" height="16"></rect>
+          <text class="fig-val" x="109.2" y="81">17</text>
+          <text x="0" y="110">LOW</text>
+          <rect class="fig-low" x="0" y="116" width="59.5" height="16"></rect>
+          <text class="fig-val" x="67.5" y="129">10</text>
+        </svg>
+      </div>
+      <p class="src">Mechanism-confidence column, 69 in-scope rows, blood-brain barrier market map. Data cut 27 July 2026.</p>
+
+      <h3>Aggregators are leads, never sources</h3>
+      <p>Review articles and databases are good at telling you something exists. They are not evidence that it does. Two Roche and Genentech shuttle patent families were examined for trontinemab and excluded: one names no receptor, the other claims LRP8. The transferrin receptor attribution came instead from a Roche publication and a press release read together, and both exclusions are recorded.</p>
+      <p class="src">WO2015124540A1, F. Hoffmann-La Roche AG; WO2011091304A1, Genentech Inc and F. Hoffmann-La Roche AG; Niewoehner et al., Neuron 2014; Roche press release, 7 July 2026.</p>
+
+      <h3>Human, non-human primate and rodent evidence are kept apart</h3>
+      <p>Pabinafusp alfa's brain distribution was shown in human transferrin receptor knock-in mice and in monkeys. The reduction in cerebrospinal fluid heparan sulfate was shown in people. Both appear in the same paper and they are not the same class of fact.</p>
+      <p class="src">Yamamoto R, Kawashima S. Nihon Yakurigaku Zasshi 2022;157(1):62-75. doi:10.1254/fpj.21080.</p>
+
+      <h3>What could not be verified is published, not dropped</h3>
+      <p>A secondary review reported that up to 18% of trontinemab recipients developed transient anaemia. The AAIC 2026 presentation covering the open-label extension reports 4.5%, 4.3% and 3.7%. No document retrieved supports 18%, so the figure was struck and the strike written down.</p>
+      <p class="src">Nature Reviews Drug Discovery news feature, 16 July 2026, for the 18% figure. Kulic et al., AAIC 2026, slide 18, for the extension rates.</p>
+      <p>The same rule struck a set of platform holders from the counts entirely, each resting on one secondary review with no company document behind it. That lowered the headline number, which was the point.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="prose">
+      <h2>Why the practice exists</h2>
+      <p>A database subscription returns records, and records are not programmes. It will not tell you that 16 registry entries in transcranial focused ultrasound collapse to 11 device systems.</p>
+      <p class="src">Focused ultrasound section, blood-brain barrier market map: 11 programmes across 16 registry records. Data cut 27 July 2026.</p>
+      <p>A general-purpose model answers fluently and fast. It will also produce a citation that does not exist, and that failure is invisible by construction: the fabricated identifier and the real one look identical.</p>
+      <p>What is sold here is not access to information. It is the willingness to write down what the information does not support.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wide">
+    <p>Unblinded Neuro. George Carter, <a href="mailto:george@unblindedneuro.com">george@unblindedneuro.com</a></p>
+    <p class="small">Everything published here is informational market analysis prepared from publicly available sources. It is not investment advice, nor a recommendation to buy, sell or hold any security. No valuation, price target or return projection is expressed or implied.</p>
+  </div>
+</footer>
+
+</body>
+</html>

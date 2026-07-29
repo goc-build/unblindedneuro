@@ -1,0 +1,6 @@
+# OS and editor noise. Nothing else belongs here: every other file in this
+# folder is served, so if it should not be public it should not be in the repo.
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp

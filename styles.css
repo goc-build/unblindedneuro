@@ -1,0 +1,456 @@
+/* unblindedneuro.com — built to 02_Templates/SITE-SPEC.md
+   Palette inherited from TEMPLATE-SPEC.md. No framework, no build step. */
+
+:root {
+  --primary:    #1E3A31;
+  --green-mid:  #4A7C64;
+  --green-pale: #DCE6E0;
+  --accent:     #C8A96A;
+  --sand-pale:  #F0E6D2;
+  --text:       #24241F;
+  --muted:      #6B6B63;
+  --rule:       #D6D3CA;
+  --bg:         #FFFFFF;
+
+  /* 1E3A31 at a 45% white tint. Contrast against white 3.22:1. A derived
+     palette tone: hero tint fill, and the LOW segment of content graphics. */
+  --green-tint:   #83938E;
+
+  --wide: 1100px;
+  --prose: 680px;
+  --gutter: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* ---------- measures ---------- */
+
+.wide  { max-width: var(--wide);  margin: 0 auto; padding: 0 var(--gutter); }
+.prose { max-width: calc(var(--prose) + var(--gutter) * 2); margin: 0 auto 0 auto;
+         padding: 0 var(--gutter); }
+
+/* The prose column shares the wide column's left edge rather than centring
+   independently. Data is wide, argument is narrow, one left edge. */
+@media (min-width: 1000px) {
+  .prose { max-width: var(--wide); }
+  .prose > * { max-width: var(--prose); }
+  .prose > .full { max-width: none; }
+}
+
+/* ---------- type ---------- */
+
+h1, h2, h3 {
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 16px;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+}
+
+h1 { font-size: 44px; }
+h2 { font-size: 28px; margin-bottom: 20px; }
+h3 { font-size: 20px; margin-bottom: 8px; }
+
+p { margin: 0 0 20px; max-width: 68ch; }
+
+strong, b { font-weight: 700; }
+
+.eyebrow {
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.lede { font-size: 20px; }
+
+.caption {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0 0 6px;
+  max-width: none;
+}
+
+/* ---------- source markers (signature device 2) ---------- */
+
+.src {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+  border-left: 2px solid var(--accent);
+  padding-left: 10px;
+  margin: -8px 0 24px;
+  max-width: 68ch;
+}
+
+/* ---------- links ---------- */
+
+a {
+  color: var(--green-mid);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 150ms ease-out;
+}
+
+a:hover::after, a:focus-visible::after { transform: scaleX(1); }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* ---------- navigation ---------- */
+
+.site-nav { border-bottom: 1px solid var(--rule); }
+
+.site-nav .wide {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--primary);
+  border-bottom: 0;
+  letter-spacing: -0.005em;
+}
+
+.brand::after { display: none; }
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--primary);
+  border-bottom: 0;
+}
+
+.site-nav a[aria-current="page"] { color: var(--green-mid); }
+
+/* ---------- sections ---------- */
+
+main > section { padding: 96px 0 0; }
+main > section:last-of-type { padding-bottom: 96px; }
+.hero { padding-top: 72px; }
+
+hr.rule {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+
+/* ---------- call to action, one per page ---------- */
+
+.cta {
+  display: inline-block;
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--primary);
+  border: 2px solid var(--accent);
+  border-radius: 0;
+  padding: 14px 20px;
+  transition: background-color 150ms ease-out;
+}
+
+.cta::after { display: none; }
+.cta:hover { background: var(--sand-pale); }
+
+/* ---------- hero chart (signature device 1) ---------- */
+
+.chart { width: 100%; height: auto; display: block; margin: 40px 0 20px; }
+.chart-narrow { display: none; }
+
+.bar-solid { fill: var(--primary); }
+.bar-tint  { fill: var(--green-tint); }
+.axis      { stroke: var(--rule); stroke-width: 1; }
+
+.chart text {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  fill: var(--muted);
+  font-size: 14px;
+}
+
+.chart .val { fill: var(--text); font-weight: 700; }
+
+.bar {
+  transform-box: fill-box;
+  transform-origin: bottom center;
+  animation: grow 600ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+.chart-narrow .bar { transform-origin: left center; animation-name: grow-x; }
+
+.val { animation: fade 300ms ease-out both; }
+
+@keyframes grow   { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes grow-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes fade   { from { opacity: 0; }          to { opacity: 1; } }
+
+.d1 { animation-delay: 0ms; }
+.d2 { animation-delay: 60ms; }
+.d3 { animation-delay: 120ms; }
+.d4 { animation-delay: 180ms; }
+.d5 { animation-delay: 240ms; }
+.d6 { animation-delay: 300ms; }
+.d7 { animation-delay: 360ms; }
+
+.val.d1 { animation-delay: 300ms; }
+.val.d2 { animation-delay: 360ms; }
+.val.d3 { animation-delay: 420ms; }
+.val.d4 { animation-delay: 480ms; }
+.val.d5 { animation-delay: 540ms; }
+.val.d6 { animation-delay: 600ms; }
+.val.d7 { animation-delay: 660ms; }
+
+/* ---------- section reveal, added by script only ---------- */
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+}
+
+.js .reveal.shown { opacity: 1; transform: none; }
+
+/* ---------- lists and tables ---------- */
+
+ul.plain, ol.plain { padding-left: 22px; margin: 0 0 20px; max-width: 68ch; }
+ul.plain li, ol.plain li { margin-bottom: 10px; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: var(--prose);
+  font-size: 16px;
+  margin: 0 0 24px;
+}
+
+table caption { text-align: left; margin-bottom: 10px; }
+
+th, td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+th {
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+tbody tr:nth-child(even) { background: var(--green-pale); }
+
+td.num, th.num { text-align: right; }
+
+/* ---------- insights index ---------- */
+
+.post-list { list-style: none; margin: 0; padding: 0; max-width: var(--prose); }
+
+.post-list li { padding: 24px 0; border-bottom: 1px solid var(--rule); }
+.post-list li:first-child { padding-top: 0; }
+
+.post-list h2 { font-size: 20px; margin-bottom: 4px; }
+.post-list h2 a { color: var(--primary); border-bottom: 0; }
+.post-list p { margin: 0 0 4px; }
+
+.post-meta { font-size: 14px; color: var(--muted); }
+
+.post-head { margin-bottom: 40px; }
+
+/* ---------- footer ---------- */
+
+.site-foot {
+  background: var(--primary);
+  color: var(--green-pale);
+  margin-top: 96px;
+  padding: 48px 0;
+  font-size: 16px;
+}
+
+.site-foot a { color: #FFFFFF; border-bottom-color: rgba(255, 255, 255, 0.35); }
+.site-foot p { margin: 0 0 8px; max-width: none; }
+.site-foot .small { font-size: 14px; color: #B7C4BE; margin-top: 20px; }
+
+.site-foot a:focus-visible { outline-color: #FFFFFF; }
+
+/* ---------- skip link ---------- */
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--primary);
+  color: #FFFFFF;
+  padding: 12px 16px;
+  border-bottom: 0;
+  z-index: 10;
+}
+
+.skip:focus { left: 0; }
+
+/* ---------- breakpoints: two only ---------- */
+
+@media (max-width: 1000px) {
+  :root { --gutter: 40px; }
+
+  /* Charts swap at 1000px, not 600px. A scaling SVG scales its own type: the
+     wide chart's 14px viewBox labels render 8.8px in a 768px viewport and
+     6.6px at 601px. The horizontal variant holds its labels at 16.9px across
+     the whole band. It sits left, against the same edge as the prose, with
+     whitespace to its right. */
+  .chart-wide { display: none; }
+  .chart-narrow { display: block; }
+}
+
+@media (max-width: 600px) {
+  :root { --gutter: 24px; }
+
+  body { font-size: 17px; }
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 19px; }
+  .lede { font-size: 18px; }
+
+  main > section { padding-top: 56px; }
+  main > section:last-of-type { padding-bottom: 56px; }
+  .hero { padding-top: 40px; }
+  .site-foot { margin-top: 56px; }
+
+  .site-nav .wide { padding-top: 18px; padding-bottom: 18px; }
+  .site-nav ul { gap: 20px; }
+
+  table { font-size: 15px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .bar, .val { animation: none; }
+  a::after { transition: none; transform: scaleX(1); opacity: 0; }
+  a:hover::after, a:focus-visible::after { opacity: 1; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .cta { transition: none; }
+}
+
+/* ---------- hero chart eyebrow ---------- */
+
+.chart-eyebrow { margin-bottom: 0; }
+.chart-eyebrow + .chart { margin-top: 14px; }
+
+/* ---------- content graphics (SITE-SPEC 7.3) ----------
+   Content, not identity. Palette only, no library, no motion at any time. */
+
+.figure { margin: 8px 0 24px; }
+/* display lives on the variant classes only. Putting it on `.figure svg`
+   gives that rule higher specificity than .fig-narrow, which rendered both
+   variants at once. */
+.figure svg { width: 100%; height: auto; }
+
+.figure text {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  fill: var(--muted);
+  font-size: 14px;
+}
+
+.figure .fig-num {
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.figure .fig-name {
+  font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  fill: var(--primary);
+}
+
+.figure .fig-val { fill: var(--text); font-weight: 700; }
+
+.fig-high { fill: var(--primary); }
+.fig-med  { fill: var(--green-mid); }
+.fig-low  { fill: var(--green-tint); }
+.fig-step { fill: var(--primary); }
+
+.fig-wide   { display: block; }
+.fig-narrow { display: none; }
+
+/* Narrow charts scale to their container, so their labels scale too. Capped at
+   the width where 14px viewBox type renders at 17px. Wider than that and the
+   labels balloon against the bars. The chart then sits left, on the same edge
+   as everything else. */
+.chart-narrow, .fig-narrow { max-width: 410px; }
+
+/* ---------- wordmark glyph (see 02_Templates/BRAND.md) ----------
+   The bar-N of "Neuro". Inline, live text either side, currentColor so one
+   piece of markup serves nav, body and footer. */
+
+.glyph {
+  display: inline-block;
+  vertical-align: baseline;
+  height: .72em;
+  width: .66em;
+  margin: 0 .012em;
+}
+
+.glyph rect { fill: currentColor; }
+.glyph line { stroke: currentColor; }
+
+/* The figure swap lives here, after the base .fig-* rules above, not in the
+   breakpoints block near the top. Equal specificity is decided by source
+   order, and the earlier media query lost to the later base rule. */
+@media (max-width: 1000px) {
+  .fig-wide { display: none; }
+  .fig-narrow { display: block; }
+}
