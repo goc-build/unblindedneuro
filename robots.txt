@@ -1,0 +1,8 @@
+# unblindedneuro.com
+# Everything here is public and intended to be crawled. No crawl-delay, no
+# disallowed paths, no attempt to hide anything from an indexer.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://unblindedneuro.com/sitemap.xml
