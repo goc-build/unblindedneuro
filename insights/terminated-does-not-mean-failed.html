@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminated does not mean failed | Unblinded Neuro</title>
+<meta name="description" content="Across 177 terminated industry-sponsored neurodegeneration trials, fewer than half stopped for a reason about the drug. The share depends almost entirely on trial size.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Terminated does not mean failed">
+<meta property="og:description" content="Fewer than half of terminated neurodegeneration trials stopped because of the drug. Under 25 participants it was a quarter. Above 300 it was three-quarters.">
+<meta property="og:url" content="https://unblindedneuro.com/insights/terminated-does-not-mean-failed.html">
+<link rel="canonical" href="https://unblindedneuro.com/insights/terminated-does-not-mean-failed.html">
+<meta property="og:site_name" content="Unblinded Neuro">
+<meta property="og:image" content="https://unblindedneuro.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Unblinded Neuro">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Terminated does not mean failed",
+  "datePublished": "2026-08-04",
+  "dateModified": "2026-08-04",
+  "inLanguage": "en-GB",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://unblindedneuro.com/insights/terminated-does-not-mean-failed.html"
+  },
+  "image": "https://unblindedneuro.com/assets/og-image.png",
+  "author": {
+    "@type": "Person",
+    "name": "George Carter"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Unblinded Neuro",
+    "url": "https://unblindedneuro.com/"
+  },
+  "isPartOf": {
+    "@id": "https://unblindedneuro.com/#website"
+  }
+}
+</script>
+<script>
+document.documentElement.className += " js";
+document.addEventListener("DOMContentLoaded", function () {
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    for (var i = 0; i < els.length; i++) { els[i].className += " shown"; }
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    for (var i = 0; i < entries.length; i++) {
+      if (entries[i].isIntersecting) {
+        entries[i].target.classList.add("shown");
+        io.unobserve(entries[i].target);
+      }
+    }
+  }, { rootMargin: "0px 0px -8% 0px", threshold: 0.04 });
+  for (var j = 0; j < els.length; j++) { io.observe(els[j]); }
+});
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="site-nav" aria-label="Primary">
+  <div class="wide">
+    <a class="brand" href="../index.html" aria-label="Unblinded Neuro">Unblinded <svg class="glyph" viewBox="0 0 66 72" aria-hidden="true"><rect x="0" y="0" width="14" height="69"></rect><rect x="19" y="12" width="13" height="57"></rect><rect x="35" y="34" width="13" height="35"></rect><rect x="52" y="0" width="14" height="69"></rect><line x1="0" y1="70.5" x2="66" y2="70.5" stroke-width="3" opacity=".55"></line></svg>euro</a>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services.html">Services</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../insights.html" aria-current="page">Insights</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+  <article>
+    <section class="hero">
+      <div class="prose">
+        <div class="post-head">
+          <p class="eyebrow">Insight</p>
+          <h1>Terminated does not mean failed</h1>
+          <p class="post-meta">4 August 2026. Data cut 4 August 2026.</p>
+        </div>
+        <p class="lede">Across 177 industry-sponsored neurodegeneration trials that enrolled participants and then stopped, fewer than half give a reason that says anything about the drug. Which half you are looking at depends almost entirely on how large the trial was.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="prose">
+        <h2>What was counted</h2>
+        <p>Every interventional trial with an industry lead sponsor, in six neurodegenerative conditions, registered as terminated or withdrawn, with a start date of 1 January 2015 or later. The query returned 235 records. All 235 were read and classified by hand.</p>
+        <p>The 177 figure used throughout is the terminated subset. The remaining 58 were withdrawn, meaning they enrolled nobody, so they carry no participants and a thinner obligation to explain themselves.</p>
+        <p class="src">ClinicalTrials.gov API v2, retrieved 4 August 2026. <code>query.cond=(Alzheimer OR Parkinson OR "Amyotrophic Lateral Sclerosis" OR Huntington OR "Frontotemporal Dementia" OR "Multiple System Atrophy")</code>, <code>filter.overallStatus=TERMINATED,WITHDRAWN</code>, <code>filter.advanced=AREA[StudyType]INTERVENTIONAL AND AREA[LeadSponsorClass]INDUSTRY AND AREA[StartDate]RANGE[2015-01-01,MAX]</code>.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="prose">
+        <h2>How each reason was classified</h2>
+        <p>One test applied to every record: does the stated reason tell a reader anything about whether the drug worked or was safe?</p>
+        <table>
+          <thead>
+            <tr><th scope="col">Category</th><th scope="col">Test</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>The drug</td><td>Attributes the stop to data about the drug: efficacy, futility, safety, benefit-risk, target engagement, or a named parent-study result</td></tr>
+            <tr><td>Something else, named</td><td>A specific cause unrelated to the drug: recruitment, funding, supply, a protocol redesign, company closure, planned completion</td></tr>
+            <tr><td>Not stated</td><td>Records that a decision was taken without giving a reason, or leaves the field empty</td></tr>
+          </tbody>
+        </table>
+        <p>Two judgement calls are worth stating because they move the numbers. <strong>Negation is not explanation:</strong> "terminated for business reasons, not due to safety or efficacy concerns" rules two causes out and supplies none, so eleven such records were classified as not stated. <strong>Company closure is a named cause,</strong> not an absence: it explains the stop and establishes that the drug was not the reason.</p>
+        <p>Every manual reclassification is enumerated in the analysis script rather than folded into the matching rules, so each judgement can be checked individually.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="prose">
+        <h2>Fewer than half stopped because of the drug</h2>
+        <table>
+          <thead>
+            <tr><th scope="col">Reason</th><th scope="col">Trials</th><th scope="col">Share</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>The drug</td><td>79</td><td>44.6%</td></tr>
+            <tr><td>Something else, named</td><td>34</td><td>19.2%</td></tr>
+            <tr><td>Not stated</td><td>64</td><td>36.2%</td></tr>
+          </tbody>
+        </table>
+        <p>The named non-drug causes are more mundane than the category suggests, and they are worth reading individually. A temperature excursion at a supplier's storage facility destroyed enough investigational product to stop recruitment. A sponsor became insolvent. Another ceased operations. A principal investigator left for another position. Swissmedic ordered treatment stopped. In one case a sponsor and a hospital never reached agreement.</p>
+        <p class="src">Verbatim reasons for all 235 records are in the data file linked at the end of this piece.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="prose">
+        <h2>The share depends almost entirely on trial size</h2>
+        <p>Splitting the 177 by enrolment produces a gradient with no exceptions.</p>
+        <table>
+          <thead>
+            <tr><th scope="col">Participants</th><th scope="col">Trials</th><th scope="col">The drug</th><th scope="col">Something else</th><th scope="col">Not stated</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 to 24</td><td>57</td><td>25%</td><td>40%</td><td>35%</td></tr>
+            <tr><td>25 to 99</td><td>52</td><td>40%</td><td>13%</td><td>46%</td></tr>
+            <tr><td>100 to 299</td><td>31</td><td>52%</td><td>13%</td><td>35%</td></tr>
+            <tr><td>300 or more</td><td>37</td><td>76%</td><td>0%</td><td>24%</td></tr>
+          </tbody>
+        </table>
+        <p>Above 300 participants, not one trial stopped for a named non-drug reason. Below 25, that was the single largest group. The common reading of a termination as a signal about the molecule is therefore accurate at one end of the distribution and misleading at the other.</p>
+        <p class="src">Counts: 14+23+20=57, 21+7+24=52, 16+4+11=31, 28+0+9=37. Total 177.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="prose">
+        <h2>Disclosure tracks the sponsor, not the trial</h2>
+        <p>The share giving no reason at all runs 35%, 46%, 36% and 24% across the four size bands. Unlike the other two categories it barely moves, so it is not a small-company problem.</p>
+        <p>It does move with something else. Across all 235 records, sponsors who gave a reason about the drug posted their trial results 78% of the time. Sponsors who wrote a stock phrase posted results 43% of the time. The two behaviours travel together, which points at a disclosure habit rather than a defective form.</p>
+        <p>That distinction matters for what would follow. Of the 87 records giving no usable reason, 23 enrolled nobody. Of the 64 that did enrol participants, 38 have results posted. So 26 trials enrolled participants and published neither a reason nor a result, covering 1,299 people. That is the group for which nothing is public, and it is considerably smaller than the headline count implies.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="prose">
+        <h2>What this does not establish</h2>
+        <p>No sponsor breached any obligation. The <code>whyStopped</code> field is free text with no required specificity, so a single word complies. This is a finding about what the register captures.</p>
+        <p>It does not establish that neurodegeneration is unusual. An oncology cohort was run for comparison and the result went the other way, but by a cruder method: a keyword proxy applied identically to both fields, calibrated against the hand-classified neurodegeneration records at precision 0.96 and recall 0.62. On that proxy, 36.5% of 2,572 stopped oncology trials carry a stock-phrase reason against 25.5% in neurodegeneration. The oncology cohort has not been hand-classified, so this establishes a direction and not a rate.</p>
+        <p>It does not test whether these trials were explained elsewhere in publications, conference presentations or filings. Some certainly were. One of the four largest records here is the ENVISION study of aducanumab, whose termination Biogen explained at length in a press release while the register recorded "Sponsor's Decision".</p>
+        <p class="src">Biogen, "Biogen to Realign Resources for Alzheimer's Disease Franchise", 31 January 2024, also filed as Form 8-K exhibit 99.1.</p>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div class="prose">
+        <h2>The data</h2>
+        <p>All 235 records with status, enrolment, assigned category and the reason as recorded: <a href="../assets/stopped-trials-235-records.tsv">stopped-trials-235-records.tsv</a>. Tab separated, 235 rows plus a header.</p>
+        <p>The query above reproduces the extract. Anything in this piece that cannot be traced to that file or to the Biogen release named above should be treated as unsupported, and I would like to know about it.</p>
+        <p><a href="../insights.html">Back to Insights</a></p>
+      </div>
+    </section>
+  </article>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wide">
+    <p>Unblinded Neuro. George Carter, <a href="mailto:george@unblindedneuro.com">george@unblindedneuro.com</a></p>
+    <p class="small">Everything published here is informational market analysis prepared from publicly available sources. It is not investment advice, nor a recommendation to buy, sell or hold any security. No valuation, price target or return projection is expressed or implied.</p>
+  </div>
+</footer>
+
+</body>
+</html>
