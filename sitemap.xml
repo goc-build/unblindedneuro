@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://unblindedneuro.com/</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,9 +20,15 @@
   </url>
   <url>
     <loc>https://unblindedneuro.com/insights.html</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://unblindedneuro.com/insights/ai-drug-discovery-alzheimers.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://unblindedneuro.com/insights/terminated-does-not-mean-failed.html</loc>
